@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            background-color: rgb(117, 117, 117);
+            height: 100vh;
+            width:200px;
+            position: absolute;
+            top: 0;
+            box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+            left: -200px;
+            transition: all 0.3s linear;
+        }
+        input{
+            display: none;
+        }
+        label{
+            font-size: 40px;
+        }
+        .foot{
+            position: absolute;
+            bottom: 20px;
+            left:15%;
+        }
+        .foot a{
+            padding: 5px;
+            font-size: x-large;
+            text-decoration: none;
+            transition: all 0.3s linear;
+
+        }
+        .foot a:hover{
+            background-color: rgb(124, 124, 124);
+            font-size:xx-large;
+        }
+        div ul li{
+            padding: 20px 50px;
+            text-decoration: none;
+            text-decoration: none;
+            transition: all 0.3s linear;
+
+        }
+        div ul li:hover{
+            background-color: aliceblue;
+        }
+        h2{
+             padding: 20px 50px;
+             background-color: rgb(82, 82, 82);
+             color: azure;
+        }
+        .hide{
+            position: absolute;
+            right: 0;
+            top: 5px;
+        }
+        #checkbox:checked ~ div{
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="checkbox">
+    <label class="show" for="checkbox">❄️</label>
+    <div class="main">
+        <h2>ZENIN</h2>
+        <label class="hide" for="checkbox">🔥</label>
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICE</li>
+            <li>CONTACT</li>
+        </ul>
+
+        <div class="foot">
+            <a href="">😁</a>
+            <a href="">☺️</a>
+            <a href="">🥰</a>
+        </div>
+
+    </div>
+</body>
+</html>

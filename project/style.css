@@ -1,0 +1,265 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    height: 100vh;
+    background-color: #000000;
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color: black;
+    width: 330px;
+    margin-right:0.5rem;
+}
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    overflow:auto;
+    padding: 0 1.5rem 0 1.5rem;
+}
+.music-player{
+    background-color: black;
+    height:70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+}
+.nav{
+    background-color: #121212;
+    border-radius:1rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+}
+.nav-opt{
+    line-height:1.7rem;
+    opacity: 0.6;
+    padding:0.5rem 0.7rem;
+}
+.nav-opt:hover{
+    opacity:1;
+}
+.nav-opt i{
+    font-size: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top:0.5rem;
+    padding:0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lib-options img{
+    height:1.25rem;
+    width: 1.25rem;
+}
+.icons{
+    font-size: 1.26rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.6;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+} 
+.box{
+    height: 8rem;
+    background-color: #232323;
+    border-radius: 0.7rem;
+    margin: 0.75rem 0 0.75rem 0;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+.badge{
+    background-color: white;
+    border:none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight:700;
+    margin-top: 0.5rem;
+    height: 2rem;
+    width: fit-content;
+}
+.dark-bdg{
+    background-color: #000000;
+    color: white;
+}
+.sticky-nav{
+    background-color: #121212;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 1rem 0 1rem 0;
+}
+.sticky-nav-icons {
+    margin-left: 0.75rem;
+    padding-top: 0.9rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.nav-items{
+    margin-right: 1rem;
+}
+.profile{
+    margin-right: 10px;
+}
+
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    background-color: #232323;
+    width: 150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-img{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+}
+.line{
+    width: 90%;
+    height: 50%;
+    border-top: 1px solid white;
+    opacity: 0.5;
+}
+.alb-img{
+    margin: 0.5rem;
+    height:3.2rem;
+}
+.singer{
+    margin-top: -16px;
+    font-size: x-small;
+}
+.alb-cover{
+    display: flex;
+    align-items: center;
+}
+.cover-icons{
+    margin-left: 1rem;
+}
+.cover-icons i{
+    margin-left: 0.5rem;
+}
+.player-control-icon{
+    height: 1rem;
+     margin-right:1.7rem;
+     opacity: 0.7;
+}
+.player-controls{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-bar{
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.progress-bar::-webkit-slider-runnable-track:hover{
+    background-color: #20f36e;
+}
+.controls i{
+    margin-left:0.1rem;
+}
+.controls input::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.controls input::-webkit-slider-thumb{
+    margin-top: -6px;
+}

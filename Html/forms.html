@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- level one -->
+     <h1>level 2</h1>
+    <form action="/action">
+        <div>
+            <label> Text :  
+            <input type="text" placeholder="Enter The Text">
+            </label>
+        </div>
+
+        <div>
+            <label>
+            Password :
+            <input type="password" placeholder="Enter The Password">
+            </label>
+        </div>
+
+
+        <!-- Classical Approach -->
+         <div>
+            <label for="clr">Choose The Color :</label>
+            <input type="color" id="clr" placeholder="choose the color">
+         </div>
+        
+         <div>
+            <label for="upfile"></label>
+            <input type="file" id="upfile">
+         </div>
+        
+         <div>
+            <input type="submit">
+         </div>
+
+         <div>
+            <input type="button" value="Click me">
+         </div>
+
+        <button>Submit</button>
+    </form>
+<hr>
+<hr>
+    <!-- Level 3 -->
+     <h1>Level 3</h1>
+     <form action="/server" method="get">
+        <div>
+            <label for="uemail">Email :</label>
+            <input type="email" placeholder="Enter your email" name="email" id="uemail">
+        </div>
+        <div>
+            <label for="upwd">Password :</label>
+            <input type="password" placeholder="Enter your password" name="pwd" id="upwd">
+        </div>
+        <button>Submit</button>
+
+        <!-- after submit 
+          http://127.0.0.1:5500/server?email=yogeshchouhan2253%40gmail.com&pwd=1234
+          
+          send in name=value pair
+        -->
+
+     </form>
+
+        <hr>
+        <hr>
+
+     <!-- Practice Questions -->
+      <h1>Practic Question</h1>
+      <form action="https://www.google.com/search">
+        <div>
+            <label for="uSearch">Search Bar:</label>
+            <input type="text" id="uSearch" placeholder="search here" name="q">
+        </div>
+        <button>Search</button>
+      </form>
+
+</body>
+</html>

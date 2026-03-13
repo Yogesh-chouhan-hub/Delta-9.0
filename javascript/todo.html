@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Its a Todo List</h1>
+        <div>
+            <input type="text" id="inp">
+            <button id="btn">Add</button>
+            <ul>
+
+            </ul>
+        </div>
+    <script>
+
+        let inp = document.querySelector('#inp');
+        let btn = document.querySelector('#btn');
+
+        btn.addEventListener('click',()=>{
+           let task = document.createElement('li'); 
+           task.innerText = inp.value;
+
+           document.querySelector('ul').append(task);
+           let del = document.createElement('button');
+           del.innerText = 'Delete';
+
+           task.appendChild(del);
+
+           inp.value = "";
+        })
+    </script>
+</body>
+</html>
