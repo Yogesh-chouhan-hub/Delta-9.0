@@ -1,5 +1,5 @@
 const apple = require("./apple")
 const mango = require("./mango")
 
-let fruits = [apple,mango]
-module.exports = fruits;
+let details = [apple,mango]
+module.exports = details;

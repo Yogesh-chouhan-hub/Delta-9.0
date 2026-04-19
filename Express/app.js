@@ -5,9 +5,9 @@ const app = express();
 
 let PORT = 3000;
 
-app.get('/',(req,res)=>{
-    let {id} = req.query;
-    res.send(id);
+app.get('/:id',(req,res)=>{
+    let {id} = req.params;
+    res.send(`${id} was the param request...`);
 })
 
 app.listen(PORT,()=>{
