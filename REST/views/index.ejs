@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
     <title>all posts</title>
 </head>
 <body>
@@ -12,8 +13,18 @@
 <div>
     <h2><%= post.username %></h2>
     <h3><%= post.content %></h2>
+        <div>
+            <button>Delete</button>
+            <a href="/posts/<%= post.id %>">See More</a>
+        </div>
     <hr>
 </div>
 <% } %>
+<div>
+    <a href="/post/new">Add New Post</a>
+</div>
+<br>
+<hr>
+<%- include("include/footer.ejs") %>
 </body>
 </html>
