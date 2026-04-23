@@ -2,12 +2,14 @@ const { error } = require("console");
 const express = require("express")
 const path = require("path");
 const {v4:uuidv4} = require("uuid")
+const methodOverride = require('method-override');
 
 const app = express();
 const port = 8080;
 
 app.use(express.urlencoded({extended : true}));
 app.use(express.json());
+app.use(methodOverride('_method'))
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"))
@@ -70,19 +72,38 @@ app.get('/posts/:id',(req,res)=>{
     //})
 })
 
-app.get('/posts/update/:id',(req,res)=>{
+app.get('/posts/:id/edit',(req,res)=>{
     let {id} = req.params;
-    let post = posts.find((p)=>id===p.id)
-    //res.send(post)
-    res.render('update.ejs',{post})
+    let post = posts.find((p)=>id === p.id)
+    if (post){
+        res.render("edit.ejs",{post});
+    }else{
+        res.send(`<h1>User does'nt exist....</h1>`)
+    }
 })
 
-app.patch('/posts/update/:id',(req,res)=>{
+app.patch('/posts/:id/edit',(req,res)=>{
     let {id} = req.params;
+    let newUsername = req.body.username;
     let newContent = req.body.content;
-    let post = posts.find((p)=>id === p.id);
-    post.content = newContent;
-    res.send("update successfully...");
+
+    let post = posts.find((p)=> id === p.id)
+    if(post){
+        post.content = newContent;
+        post.username = newUsername;
+        res.redirect('/posts');
+    }else{
+        res.send('user doesnt exist in database');
+    }
+    
+    // let posts = posts.filter((p)=> id !== p.id);
+})
+
+app.delete('/posts/:id/delete',(req,res)=>{
+    let {id} = req.params;
+    posts = posts.filter((p)=>id !== p.id);
+    res.redirect('/posts');
+
 })
 
 app.listen(port,()=>{

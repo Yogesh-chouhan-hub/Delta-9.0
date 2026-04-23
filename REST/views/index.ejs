@@ -14,14 +14,17 @@
     <h2><%= post.username %></h2>
     <h3><%= post.content %></h2>
         <div>
-            <button>Delete</button>
             <a href="/posts/<%= post.id %>">See More</a>
+            <a href="/posts/<%= post.id %>/edit">Edit</a>
+            <form style="display: inline;" method="post" action="/posts/<%= post.id %>/delete?_method=DELETE">
+                <button>Delete</button>
+            </form>
         </div>
     <hr>
 </div>
 <% } %>
 <div>
-    <a href="/post/new">Add New Post</a>
+    <a href="/post/new">Add New Post➡️</a>
 </div>
 <br>
 <hr>
