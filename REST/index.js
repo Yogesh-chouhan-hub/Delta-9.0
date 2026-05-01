@@ -84,7 +84,7 @@ app.get('/posts/:id/edit',(req,res)=>{
 
 app.patch('/posts/:id/edit',(req,res)=>{
     let {id} = req.params;
-    let newUsername = req.body.username;
+    let newUsername = req.body.username;       
     let newContent = req.body.content;
 
     let post = posts.find((p)=> id === p.id)

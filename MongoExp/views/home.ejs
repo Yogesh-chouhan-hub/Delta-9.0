@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Whatapp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Welcome to Home Page</h1>
+    <h2>All Chats...</h2>
+
+    <div class="chat-container">
+        <% for(let chat of chats) { %>
+            <div class="chat-box">
+                <h3 class="from">From: <%= chat.from %></h3>
+                <h3 class="to">To: <%= chat.to %></h3>
+                <p class="msg"><%= chat.msg %></p>
+                <p class="time"><%= chat.created_at %></p>
+                    <div class="delupd-btn">
+                        <form method="post" action="http://localhost:9090/chats/<%=chat._id%>/delete?_method=DELETE">
+                            <a href="http://localhost:9090/chats/<%=chat._id%>/delete"><button class="del-btn">🚮</button></a>
+                        </form>
+                        <a href="/chats/update/<%=chat._id%>/"><button class="upd-btn">Update</button></a>
+                    </div>
+            </div>
+        <% } %>
+    </div>
+    <div class="btn-container">
+        <a href="http://localhost:9090/chats/new"><button class="newChat">New Chat</button></a>
+    </div>
+</body>
+</html>

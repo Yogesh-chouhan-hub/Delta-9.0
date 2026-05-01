@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ece5dd;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    background-color: #075e54;
+    color: white;
+    padding: 15px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.chat-container {
+    width: 60%;
+    margin: 10px;
+}
+
+.chat-box {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.chat-box h3 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.from {
+    color: #075e54;
+    font-weight: bold;
+}
+
+.to {
+    color: #128c7e;
+}
+
+.msg {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.time {
+    font-size: 12px;
+    color: gray;
+    text-align: right;
+}
+
+.form-container {
+    width: 350px;
+    margin:80px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Inputs */
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    display: block;
+}
+
+/* Button */
+.form-container button{
+    width: 100%;
+    padding: 10px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #128c7e;
+}
+
+.newChat{
+    font-weight: 400;
+    font-size: small;
+    padding:8px;
+    background-color: #25d366;
+    border: 1px transparent ;
+    border-radius: 15px;
+    margin:10px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.delupd-btn{
+    display:flex;
+    gap: 10px;
+    align-items: center;
+}
+.del-btn,.upd-btn{
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
